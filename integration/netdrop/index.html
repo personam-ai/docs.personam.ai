@@ -1,0 +1,73 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://docs.personam.ai/main.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+    <title> Personam AI Docs | Netdrop </title>
+</head>
+<body>
+
+<main>
+    
+    <nav>
+            <h1><a href="https:&#x2F;&#x2F;docs.personam.ai">Personam AI Docs</a></h1>
+            <a href="javascript:void(0);" onclick="burger()" id="mobile" class="ms-Icon--GlobalNavButton"></a>
+            <div id="trees">
+                <input class="tree-toggle" type="checkbox" id="integration"
+                           checked/>
+                    <label class="tree-toggle-label"
+                           for="integration">Integration</label>
+
+                    <ul class="subtree">
+                        <li class="active">
+                                <a href="https://docs.personam.ai/integration/netdrop/">Netdrop</a>
+                            </li>
+
+                            
+                                    
+                                    
+                                        </ul>
+                </div>
+        </nav>
+    <article>
+
+        <div id="on_right">
+                <span id="search-ico" class="ms-Icon--Search"></span>
+            </div>
+            <div class="search-container">
+                <input id="search" type="search" placeholder="Search as you type...">
+                <div class="search-results">
+                    <div class="search-results__header"></div>
+                    <ul class="search-results__items"></ul>
+                </div>
+            </div>
+        <div id="wrap">
+            
+        <h1 id="upload-pcap-file-to-personam-ai-netdrop-bucket">Upload PCap file to Personam AI NetDrop Bucket</h1>
+<p>The permissions on the AWS S3 <code>personam-ai-netdrop</code> bucket have been locked down to only allow for file uploads. These credentials can be shared to many users. At the end of the day those users will never be able to see the contents of the bucket. Your pcap, netflow, sflow or other kind of network data will be secure and unavailable to anyone outside Personam AI.</p>
+<p>If you need the AWS ACCESS/SECRET or prefer Google Cloud Storage, Azure Blob Storage, or website where you can upload content directly from your browser. Please contact Personam using <a href="mailto:web-contact@personam.ai">web-contact@personam.ai</a>.</p>
+<h2 id="aws-sync-to-s3-bucket-personam-ai-netdrop">AWS Sync to S3 Bucket [ personam-ai-netdrop ]</h2>
+<p>Intall AWS CLI: https://github.com/aws/aws-cli?tab=readme-ov-file#getting-started</p>
+<pre data-lang="bash" style="background-color:#191919;color:#f8f8f2;" class="language-bash "><code class="language-bash" data-lang="bash"><span style="color:#e9fdac;">$</span><span> python</span><span style="font-style:italic;color:#fc9354;"> -m</span><span> venv venv
+</span><span style="color:#e9fdac;">$</span><span> . venv/bin/activate
+</span><span style="color:#e9fdac;">$</span><span> pip install</span><span style="font-style:italic;color:#fc9354;"> -U</span><span> awscli
+</span><span style="color:#e9fdac;">$</span><span> export AWS_DEFAULT_REGION=us-east-1
+</span><span style="color:#e9fdac;">$</span><span> export AWS_ACCESS_KEY_ID=</span><span style="color:#ff5e5e;">&lt;</span><span>redacted</span><span style="color:#ff5e5e;">&gt;
+</span><span style="color:#e9fdac;">$</span><span> export AWS_SECRET_ACCESS_KEY=</span><span style="color:#ff5e5e;">&lt;</span><span>redacted</span><span style="color:#ff5e5e;">&gt;
+</span><span style="color:#e9fdac;">$</span><span> aws s3 sync . s3://personam-ai-netdrop
+</span></code></pre>
+
+    
+        </div>
+
+    </article>
+</main>
+
+
+    <script type="text/javascript" src="https://docs.personam.ai/elasticlunr.min.js" defer></script>
+    <script type="text/javascript" src="https://docs.personam.ai/search_index.en.js" defer></script>
+<script type="text/javascript" src="https://docs.personam.ai/js.js" defer></script>
+
+</body>
+</html>
